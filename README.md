@@ -55,18 +55,4 @@ npm run dev
 
 It opens at `http://localhost:3000`.
 
-## What's still on the list
 
-There's a few things I'd still want to add. The dashboard shows totals but not a proper savings rate or a month over month change, which would be much more useful than just the raw numbers. The CSV importer works but the column mapping is a bit strict, at the moment it wants the fields in a specific shape and it should be more forgiving. I'd like recurring transactions too, so rent and salary get added each month on their own instead of me having to type them in. And there's no bank connection yet, something like Plaid would be the obvious way to pull transactions in, but that's a much bigger job and it wasn't in scope for this pass.
-
-## What I got out of building it
-
-This was my first real go at putting a modern full stack app together end to end, and a few things really stuck with me.
-
-Using Drizzle plus Zod plus drizzle zod means I write the schema once and get types everywhere, which saves a lot of time and stops silly bugs from ever making it in. React Query is much nicer than juggling loading states by hand with useState and useEffect once you know what you're doing with it. And Clerk takes the whole auth problem off your plate so you can focus on the actual app instead of writing your own login screen from scratch.
-
-The trickiest bit was getting the API layer right. I went with Hono because it plays nicely inside Next.js and gives you a clean way to structure the routes without fighting the App Router. Once that clicked the rest of the app came together fast.
-
----
-
-*Fayz Muhammad*
